@@ -10,9 +10,9 @@ MERN stack application with user authentication with protected react router rout
 Mongoose, Express, ReactJS, Node.js, Javascript. 
 
 - [Node.js](https://nodejs.org/en/)
-- [Express.js](https://nodejs.org/en/)
-- [Mongoose](https://www.mongodb.com/)
-- [PassportJS](https://www.mongodb.com/)
+- [Express](http://expressjs.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Passport](http://www.passportjs.org/)
 - [create-react-app](https://github.com/facebook/create-react-app)
 
 ## Getting Started
@@ -30,10 +30,6 @@ cd MERN-Passport
 npm install
 npm run dev
 ```
-
-# Instructions
-
-Complete instructions at https://medium.com/@brendt_bly/simple-mern-passport-app-tutorial-4aec2105e367
 
 ### Completed Features
 

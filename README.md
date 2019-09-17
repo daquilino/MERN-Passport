@@ -7,8 +7,6 @@ MERN stack application with user authentication with protected react router rout
 
 ## Built With
 
-Mongoose, Express, ReactJS, Node.js, Javascript. 
-
 - [Node.js](https://nodejs.org/en/)
 - [Express](http://expressjs.com/)
 - [Mongoose](https://mongoosejs.com/)

@@ -38,7 +38,6 @@ npm run dev
 - [ ] Protected React Router Route
 
 
-
 ## Acknowledgments
 
 

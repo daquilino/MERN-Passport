@@ -22,9 +22,11 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/MERNPassport
 var dbConnection = mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // We need to use sessions to keep track of our user's login status
+// some comment about store
+// maybe look up and explain resave, soaveUniniliazed
 app.use(
     session({
-        secret: 'some_random_string', //pick a random string to make the hash that is generated secure
+        secret: 'some_random_string_abracadabra', //pick a random string to make the hash that is generated secure
         store: new MongoStore({ mongooseConnection: dbConnection }),
         resave: false, //required
         saveUninitialized: false //required

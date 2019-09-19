@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+const routes = require("./routes");
 
 var app = express();
 var PORT = process.env.PORT || 3001;
@@ -12,7 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Server Test Route
-app.get("/test", (req,res)=>res.json("server works"));
+app.use(routes);
+app.get("*", (req,res)=>res.json("server works"));
 
 
 app.listen(PORT,()=>console.log(`Listening on port: ${PORT}`));

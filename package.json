@@ -1,0 +1,45 @@
+{
+  "name": "mern-passport",
+  "version": "1.0.0",
+  "description": "MERN passport example app.",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daquilino/MERN-Passport.git"
+  },
+  "keywords": [
+    "MERN",
+    "Passport",
+    "PassportJS"
+  ],
+  "author": "Douglas Aquilino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daquilino/MERN-Passport/issues"
+  },
+  "homepage": "https://github.com/daquilino/MERN-Passport#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^3.0.0",
+    "express": "^4.17.1",
+    "express-sessions": "^1.0.6",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.7.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.2"
+  }
+}

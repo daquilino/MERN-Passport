@@ -1,13 +1,13 @@
-var express = require('express');
-var path = require('path');
+const express = require('express');
+const path = require('path');
 const routes = require("./routes");
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require("connect-mongo")(session);
 const passport = require("./passport");
+const PORT = process.env.PORT || 3001;
 
 var app = express();
-var PORT = process.env.PORT || 3001;
 
 // Sets up static folder
 app.use(express.static(path.join(__dirname, '../client/build')))

@@ -1,3 +1,10 @@
+// Here we define our user model in mongoose to create our user collection in our mongo db.
+// In this example we just have stored a username and password for our users.
+// The 'bcryptjs' npm package provides a method to hash the user password when saved and
+// a method to compare a hashed password to an unhashed one.
+
+
+
 const mongoose, {Schema} = require('mongoose');
 const bcrypt = require('bcryptjs');
 mongoose.promise = Promise
@@ -15,6 +22,8 @@ userSchema.methods = {
 }
 
 // Define hooks for pre-saving
+// When a user is created, this hook runs before the new user document is saved.
+// If this.password if not falsey (i.e there is a password) we use bcrypt to hash it before saving.
 userSchema.pre('save', function (next) {
 	if (!this.password) {
 		console.log('models/user.js =======NO PASSWORD PROVIDED=======')

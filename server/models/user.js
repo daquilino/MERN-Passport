@@ -3,8 +3,6 @@
 // The 'bcryptjs' npm package provides a method to hash the user password when saved and
 // a method to compare a hashed password to an unhashed one.
 
-
-
 const mongoose, {Schema} = require('mongoose');
 const bcrypt = require('bcryptjs');
 mongoose.promise = Promise

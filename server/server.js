@@ -19,7 +19,7 @@ app.use(express.json());
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/MERNPassport";
-mongoose.connect(MONGODB_URI,{ useNewUrlParser: true });
+mongoose.connect(MONGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
 
 // We need to use sessions to keep track of our user's login status
 // In production express-session can’t handle more than one user at a time,

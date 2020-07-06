@@ -2,7 +2,9 @@ const router = require('express').Router();
 
 // user signup  
 router.route("/signup")
-.post((req,res)=>res.send("signing up..."));
+.post((req,res)=>
+{res.send("signing up...")
+});
 
 // user login
 router.route("/login")
